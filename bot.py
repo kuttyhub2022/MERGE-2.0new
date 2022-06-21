@@ -324,7 +324,7 @@ async def about_handler(c: Client, m: Message):
                 [InlineKeyboardButton("Developer", url="https://t.me/yashoswalyo")],
                 [
                     InlineKeyboardButton(
-                        "Source Code", url="https://github.com/yashoswalyo/MERGE-BOT"
+                        "CHANNEL", url="https://t.me/movie_time_botonly"
                     ),
                     InlineKeyboardButton(
                         "Deployed By", url=f"https://t.me/{Config.OWNER_USERNAME}"
