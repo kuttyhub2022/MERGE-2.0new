@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  worker:
+    builder: .
+    environment:
+      - API_ID=${API_ID}
+      - API_HASH=${API_HASH}
+      - OWNER=${OWNER}
+      - BOT_TOKEN=${BOT_TOKEN}
+      - OWNER_USERNAME=${OWNER_USERNAME}
+      - DATABASE_URL=${DATABASE_URL}
+      - PASSWORD=${PASSWORD}
+      - LOGCHANNEL=${LOGCHANNEL}
