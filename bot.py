@@ -159,7 +159,7 @@ async def start_handler(c: Client, m: Message):
             )
             return
     res = await m.reply_text(
-        text=f"Hi **{m.from_user.first_name}**\n\n ⚡ I am a file/video merger bot\n\n😎 I can merge Telegram files!, And upload it to telegram\n\n**Owner: 🈲 @{Config.OWNER_USERNAME}** ",
+        text=f"Hi **{m.from_user.first_name}**\n\n ⚡ I am a file/video merger bot\n\n😎 I can merge Telegram files!, And upload it to telegram \n\n /help- how to use me \n\n /about - to know me \n\n**Owner: 🈲 @{Config.OWNER_USERNAME}** ",
         quote=True,
     )
 
@@ -296,7 +296,10 @@ async def help_msg(c: Client, m: Message):
 2) Send two or more Your Videos Which you want to merge
 3) After sending all files select merge options
 4) Select the upload mode.
-5) Select rename if you want to give custom file name else press default**""",
+5) Select rename if you want to give custom file name else press default
+6) One Process at a Time
+7) You Must login to use me
+8) login <password>**""",
         quote=True,
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Close 🔐", callback_data="close")]]
@@ -309,14 +312,14 @@ async def about_handler(c: Client, m: Message):
     await m.reply_text(
         text="""
 - **WHAT'S NEW:**
-+ Upload to drive using your own rclone config
 + Merged video preserves all streams of the first video you send (i.e. all audiotracks/subtitles)
++ DRIVE UPLOAD NOT SUPPORT
 - **FEATURES:**
 + Merge Upto 10 videos in one
 + Upload as document/video
 + Custom thumbnail support
 + Users can login to bot using password
-+ Owner can broadcast message to all users
++ ADMIN can broadcast message to all users
 		""",
         quote=True,
         reply_markup=InlineKeyboardMarkup(
